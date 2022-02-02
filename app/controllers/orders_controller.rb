@@ -1,7 +1,17 @@
 class OrdersController < ApplicationController
 
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find(params[:id]) #@order.line_items => return array 
+
+    product_ids = @order.line_items.map { |item| item.product_id}
+    @products = Product.where({id: product_ids})
+    
+
+    # @test = @products_temp[0].merge!(@line_item[0])
+    # @product_detail = Product.find_by(id: @line_item.product_id)
+    # raise @product_detail.inspect
+    # raise @products.inspect
+    # raise @test.inspect
   end
 
   def create
