@@ -1,2 +1,24 @@
+<%#
 <h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<p>Find me in app/views/admin/dashboard/show.html.erb</p> %>
+
+<h2>Dashboard</h2>
+<div class="row dashboard">
+
+  <div class="col-md-3 col-md-pull-9">Number of Products</div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Number of Products</th>
+      <th scope="col">Number of Categories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/admin/products"><%= @num_products %></a></td>
+      <td><%= @num_categories %></td>
+    </tr>
+  </tbody>
+</table>
