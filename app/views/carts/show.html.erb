@@ -6,7 +6,7 @@
 
   <% if enhanced_cart.length == 0 %>
     <div class="alert alert-primary" role="alert">
-      Your cart is empty. <%= link_to 'Back', products_path %>
+      Your cart is empty. <%= link_to 'Back', products_path, class: 'btn btn-info'%>
     </div>
   <% else %>
     <div class="panel panel-default items">
